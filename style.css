@@ -1,0 +1,189 @@
+body {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  background: linear-gradient(120deg, rgb(25, 116, 219), cyan) fixed;
+  height: 100vh;
+  width: 100vw;
+  /* cursor: url(./images/ui/waterCursor.png), auto; */
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
+
+.game-container {
+  width: 770px;
+}
+
+.ui-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fffcff;
+  z-index: 2;
+}
+
+.ui-element {
+  margin: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  background-size: 60px;
+  cursor: pointer;
+}
+.water {
+  background-image: url("./images/ui/water.png");
+}
+
+.seed {
+  background-image: url("./images/ui/potatoSeed.png");
+}
+
+.spade {
+  background-image: url("./images/ui/spade.png");
+}
+
+.collect {
+  background-image: url("./images/ui/collect.png");
+}
+
+.cancel {
+  background-image: url("./images/ui/clear.png");
+}
+
+/* user-info-container */
+.user-info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 15%;
+  width: 100%;
+  background-color: white;
+}
+
+.exp {
+  background-color: black;
+}
+
+/* farm container */
+.farm-container {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.square-box {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  /* cursor: pointer; */
+  box-sizing: border-box;
+  background-color: rgb(87, 69, 64);
+  /* background-color: rgb(92, 31, 16); */
+  /* background-image: url("./images/potato/potato.png"); */
+  margin: 5px;
+  box-shadow: 0 0 3px #cbd4c2;
+  background-size: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plant {
+  width: 50px;
+  height: 50px;
+  margin: 20px 15px 10px 15px;
+  /* background-image: url("./images/potato/potato1.png"); */
+  background-size: 50px;
+  pointer-events: none;
+}
+
+.time-top {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.time-bot {
+  margin: 2px;
+  width: 0px;
+  height: 6px;
+  position: absolute;
+  background-color: green;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.plant-ready {
+  border-style: solid;
+  border-color: orange;
+}
+
+/* Message Box */
+.message-container {
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  font-family: Arial;
+  border: 3px solid black;
+  border-radius: 50px;
+  position: absolute;
+  /* display: block; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(226, 224, 224);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.message-header {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+  font-size: 50px;
+}
+
+.message-body {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  top: 30%;
+  width: 80%;
+  left: 10%;
+}
+
+.message-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
