@@ -9,6 +9,14 @@ function plant(e, plantID) {
     }
   }
 
+  // update user info
+  let expReceieved = 2;
+  let goldChanged = -1;
+
+  rewardUser(expReceieved, goldChanged);
+  renderUserInfo();
+  saveUserData();
+
   // update info
   let currtTimeInSec = new Date().getTime() / 1000;
   InfoFarmSquares[indexOfCurrLand] = {

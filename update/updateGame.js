@@ -1,6 +1,10 @@
 function updateGame() {
   let currtTimeInSec = new Date().getTime() / 1000;
+
+  // update user info
+
   for (let i = 0; i < numFarmSquare; i++) {
+    // console.log(farmContainer);
     let currentPlant = farmContainer.childNodes[i].childNodes[2];
 
     if (InfoFarmSquares[i] === null || InfoFarmSquares[i] === undefined) continue;
@@ -32,7 +36,6 @@ function updateGame() {
         currentPlant.style.backgroundImage = `url(${plantsURL.potato1URL})`;
       }
     } else {
-      InfoFarmSquares[i].plantID = -1;
       currentPlant.style.backgroundImage = `url(${plantsURL.potatoURL})`;
       currentPlant.parentNode.childNodes[0].classList.remove("time-top");
       //   currentPlant.parentNode.childNodes[0].style.display = "none";
@@ -41,11 +44,7 @@ function updateGame() {
 
       currentPlant.parentNode.classList.add("plant-ready");
 
-      InfoFarmSquares[i] = {
-        status: STAT.READY,
-        plantTime: null,
-        plantID: InfoFarmSquares[i].plantID,
-      };
+      InfoFarmSquares[i].status = STAT.READY;
       save();
     }
   }

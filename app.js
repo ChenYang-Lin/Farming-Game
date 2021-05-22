@@ -10,6 +10,14 @@ const messageHeader = document.querySelector(".message-header");
 const messageBody = document.querySelector(".message-body");
 const messageBtn = document.querySelector(".message-btn");
 
+// Selectors for gold exp
+const currLevel = document.querySelector(".exp-curr");
+const expText = document.querySelector(".exp-text");
+const expGreen = document.querySelector(".exp-green");
+const expGreenWidth = expGreen.clientWidth;
+const expBlack = document.querySelector(".exp-black");
+const goldText = document.querySelector(".gold-text");
+
 // Selectors for general stuff
 const cover = document.querySelector(".cover");
 const timeProgressBar = document.querySelector(".time-bot");
@@ -25,8 +33,10 @@ messageBtn.addEventListener("click", (e) => {
 
 // LocalStorage keys and application data
 const LOCAL_STORAGE_FARM_STAT = "LOCAL_STORAGE_FARM_STAT";
+const LOCAL_STORAGE_FARM_USER_DATA = "LOCAL_STORAGE_FARM_USER_DATA";
 
 let InfoFarmSquares = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_STAT)) || [];
+let InfoUserData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_USER_DATA));
 
 // Image URLS and color
 // const potato1URL = "./images/potato/potato1.png";

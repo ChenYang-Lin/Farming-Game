@@ -1,0 +1,33 @@
+schema
+
+
+InfoFarmSquares 
+[
+    {
+        status: empty, growing, ready, harvested
+        plantTime: getTime;
+        watered: true, false;
+        wateredTime:
+        plantID:;
+    },
+    {}
+]
+
+plantsData
+{
+    plantID:
+    growingTime:
+
+}
+
+nextLevelExpNeed = currentLevelExpNeed * 1.3;
+
+
+
+InfoUserData {
+    currLevel: 1,
+    currExp: 0,
+    expNeededForNextLvl: 10, * 1.3
+    gold,
+
+}

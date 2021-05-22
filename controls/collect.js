@@ -12,11 +12,18 @@ function collect(e) {
     return;
   }
 
-  // update info
+  // update user info
+  let expReceieved = 2;
+  let goldChanged = 2;
+
+  rewardUser(expReceieved, goldChanged);
+  renderUserInfo();
+  saveUserData();
+
+  // update info plant
   let currPlant = farmContainer.childNodes[indexOfCurrLand].childNodes[2];
   currPlant.style.backgroundImage = `url(${plantsURL.potato0URL})`;
   currPlant.parentElement.classList.remove("plant-ready");
-  // potatoes ++ `
 
   InfoFarmSquares[indexOfCurrLand] = {
     status: STAT.HARVESTED,

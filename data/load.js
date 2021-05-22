@@ -1,4 +1,20 @@
 function load() {
+  // _________lead user data from local storage
+  if (InfoUserData === null) {
+    // intro gameplay - if possible
+    // init data
+    InfoUserData = {
+      currLevel: 1,
+      currExp: 0,
+      expNeededForNextLvl: 10,
+      gold: 100,
+    };
+    saveUserData();
+  }
+  // update display
+  renderUserInfo();
+
+  // init or load land squares
   for (let i = 0; i < numFarmSquare; i++) {
     const farmSquare = document.createElement("div");
     farmSquare.classList.add("square-box");
@@ -47,4 +63,5 @@ function load() {
       save();
     }
   }
+  // End inti land squares
 }
