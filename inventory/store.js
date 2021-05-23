@@ -30,7 +30,8 @@ function showMerchandise() {
   InfoStore.forEach((e) => {
     let plantName = e.name;
     let plantPrice = e.price;
-    let container = `
+    let container;
+    let containerUnlocked = `
       <div class="merchandise-element-container general-element-container">
             <div class="element-image" style="background-image: url(${choosePlant()}"></div>
             <div class="element-info">
@@ -39,6 +40,24 @@ function showMerchandise() {
             </div>
         </div>
       `;
+    let containerLocked = `
+      <div class="merchandise-element-container general-element-container locked">
+            <div class="element-image" style="background-image: url(${choosePlant()}"></div>
+            <div class="element-info">
+                <div class="element-name">${plantName} Seeds: </div>
+                <div class="element-price" style="font-weight: 900">$${plantPrice}</div>
+                <div class="locked-message">Unlock lv.${e.unlock}</div>
+            </div>
+        </div>
+      `;
+    // check if unlocked
+    let itemUnlockLevel = e.unlock;
+    let userCurrLevel = InfoUserData.currLevel;
+    if (userCurrLevel < itemUnlockLevel) {
+      container = containerLocked;
+    } else {
+      container = containerUnlocked;
+    }
 
     function choosePlant() {
       let e = storeData.find((e) => plantName === e.name);
