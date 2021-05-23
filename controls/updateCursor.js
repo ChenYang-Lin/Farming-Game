@@ -6,9 +6,7 @@ function updateCursor(e) {
     return;
   }
 
-  let uiContainer = e.target.parentNode;
   clearSelected(uiContainer);
-  //   console.log(e.target);
 
   if (e.target.classList[1] === "seed") {
     currInstruction = "seed";
@@ -45,11 +43,15 @@ function updateCursor(e) {
   }
 }
 
-function clearSelected(uiContainer) {
+function clearSelected() {
   document.body.style.cursor = `url(${""}), auto`;
   for (let i = 0; i < uiContainer.children.length; i++) {
     if (uiContainer.children[i].classList.contains("selected-item")) {
       uiContainer.children[i].classList.toggle("selected-item");
     }
   }
+}
+
+function resetCursor() {
+  document.body.style.cursor = `url(${""}), auto`;
 }

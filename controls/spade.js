@@ -20,6 +20,10 @@ function spade(e) {
   renderUserInfo();
   saveUserData();
 
+  // modify land color for empty
+  let currSquare = e.target;
+  currSquare.style.background = unHarvestedLand;
+
   // update info
   let currPlant = farmContainer.childNodes[indexOfCurrLand].childNodes[2];
   currPlant.style.backgroundImage = "";

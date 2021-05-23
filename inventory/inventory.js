@@ -2,8 +2,8 @@
 const invenBox = document.querySelector(".plant-seeds-container");
 const openInvenBtn = document.querySelector(".select-seeds");
 const seedsContainer = document.querySelector(".seeds-container");
-const invenCancelBtn = document.querySelector(".cancel-btn");
-const invenSelectBtn = document.querySelector(".select-btn");
+const invenCancelBtn = document.querySelector(".inven-cancel-btn");
+const invenSelectBtn = document.querySelector(".inven-select-btn");
 
 const currSeedInfo = document.querySelector(".curr-seed-amount");
 
@@ -15,6 +15,7 @@ invenCancelBtn.addEventListener("click", () => {
   closeInventory();
 });
 openInvenBtn.addEventListener("click", () => {
+  clearSelected();
   invenBox.style.display = "block";
   cover.style.display = "block";
   showSeeds();
@@ -27,12 +28,12 @@ invenSelectBtn.addEventListener("click", () => changeSeed());
 // Functions
 function showSeeds() {
   seedsContainer.innerHTML = "";
-  console.log(InfoSeedInventory);
+  //   console.log(InfoSeedInventory);
   InfoSeedInventory.forEach((e) => {
     let seedName = plantsName[e.seedID].name;
     let seedAmt = e.seedAmount;
     let container = `
-        <div class="seed-element-container">
+        <div class="seed-element-container general-element-container">
             <div class="element-image" style="background-image: url(${chooseSeeds()}"></div>
             <div class="element-info">
                 <div class="element-name">${seedName} Seeds: </div>
@@ -62,7 +63,7 @@ function selectNewSeed(e) {
   }
 
   e.target.style.border = "5px solid red";
-  console.log(indexOfSelected);
+  //   console.log(indexOfSelected);
 }
 
 function changeSeed() {
@@ -72,6 +73,7 @@ function changeSeed() {
   }
 
   selectedSeedID = indexOfSelected;
+  indexOfSelected = null;
   closeInventory();
   renderSeedDisplay();
 }
@@ -79,4 +81,5 @@ function changeSeed() {
 function closeInventory() {
   invenBox.style.display = "none";
   cover.style.display = "none";
+  indexOfSelected = null;
 }

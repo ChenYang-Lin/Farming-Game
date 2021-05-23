@@ -7,7 +7,9 @@ body {
   width: 100vw;
   /* cursor: url(./images/ui/waterCursor.png), auto; */
 }
-.cover {
+.cover,
+.cover2,
+.cover3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +17,15 @@ body {
   bottom: 0;
   display: none;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9;
+  z-index: 5;
+}
+
+.cover2 {
+  z-index: 10;
+}
+
+.cover3 {
+  z-index: 15;
 }
 
 .game-container {
@@ -305,7 +315,7 @@ body {
   justify-content: space-between;
   background-color: rgb(226, 224, 224);
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 16;
 }
 
 .message-header {

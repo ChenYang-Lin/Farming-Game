@@ -20,10 +20,14 @@ function collect(e) {
   renderUserInfo();
   saveUserData();
 
+  // modify land color for harvested
+  // let currSquare = e.target;
+  // currSquare.style.background = harvestedLand;
+
   // update info plant
   let currPlant = farmContainer.childNodes[indexOfCurrLand].childNodes[2];
   let currPlantID = InfoFarmSquares[indexOfCurrLand].plantID;
-  console.log(currPlantID);
+  // console.log(currPlantID);
 
   currPlant.style.backgroundImage = getImage(currPlantID, 0);
   // currPlant.style.backgroundImage = getImage(0, 0);

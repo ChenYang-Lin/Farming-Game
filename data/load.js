@@ -1,4 +1,8 @@
 function load() {
+  if (InfoStore.length === 0) {
+    InfoStore = storeData;
+    saveInfoStore();
+  }
   // _________lead user data from local storage
   if (InfoUserData === null) {
     // intro gameplay - if possible
@@ -12,22 +16,22 @@ function load() {
     saveUserData();
     console.log(InfoSeedInventory);
 
-    if (InfoSeedInventory.length === 0) {
-      InfoSeedInventory = [
-        {
-          seedID: 0,
-          seedAmount: 200,
-        },
-        {
-          seedID: 1,
-          seedAmount: 100,
-        },
-        {
-          seedID: 2,
-          seedAmount: 50,
-        },
-      ];
-    }
+    // inti inventory
+    InfoSeedInventory = [
+      {
+        seedID: 0,
+        seedAmount: 200,
+      },
+      {
+        seedID: 1,
+        seedAmount: 100,
+      },
+      {
+        seedID: 2,
+        seedAmount: 50,
+      },
+    ];
+
     saveSeedInventory();
   }
   // update display

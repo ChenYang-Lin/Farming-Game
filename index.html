@@ -10,6 +10,8 @@
   </head>
   <body>
     <div class="cover"></div>
+    <div class="cover2"></div>
+    <div class="cover3"></div>
     <div class="game-container">
       <div class="message-container">
         <div class="message-header">Alert</div>
@@ -17,10 +19,44 @@
         <button class="message-btn">Ok</button>
       </div>
 
-      <div class="plant-seeds-container">
-        <div class="seeds-header">Plant Seeds</div>
-        <div class="seeds-body">
-          <div class="seeds-container">
+      <div class="general-container choose-amount-container">
+        <div class="general-header">Choose Amount</div>
+        <div class="general-body choose-amount-body">
+          <button class="subtract">-</button>
+          <div class="curr-amount">1</div>
+          <button class="add">+</button>
+        </div>
+        <div class="money">Your Money: $100</div>
+        <div class="total-price">Total: $10</div>
+        <div class="general-btns">
+          <button class="btn cancel-btn amount-cancel-btn">Cancel</button>
+          <button class="btn select-btn amount-select-btn">Buy</button>
+        </div>
+      </div>
+
+      <div class="store-container general-container">
+        <div class="store-header general-header">Store</div>
+        <div class="store-body general-body">
+          <div class="merchandise-container general-list-container">
+            <!-- <div class="merchandise-element-container">
+              <div class="element-image"></div>
+              <div class="element-info">
+                <div class="element-name">Potato Seeds</div>
+                <div class="element-price">$2</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="seeds-btns general-btns">
+          <button class="btn cancel-btn store-cancel-btn">Cancel</button>
+          <button class="btn select-btn store-select-btn">Select</button>
+        </div>
+      </div>
+
+      <div class="plant-seeds-container general-container">
+        <div class="seeds-header general-header">Plant Seeds</div>
+        <div class="seeds-body general-body">
+          <div class="seeds-container general-list-container">
             <!-- <div class="seed-element-container">
               <div class="element-image"></div>
               <div class="element-info">
@@ -30,9 +66,9 @@
             </div> -->
           </div>
         </div>
-        <div class="seeds-btns">
-          <button class="btn cancel-btn">Cancel</button>
-          <button class="btn select-btn">Select</button>
+        <div class="seeds-btns general-btns">
+          <button class="btn cancel-btn inven-cancel-btn">Cancel</button>
+          <button class="btn select-btn inven-select-btn">Select</button>
         </div>
       </div>
 
@@ -86,6 +122,7 @@
     <script src="./update/updateGame.js"></script>
 
     <script src="inventory/inventory.js"></script>
+    <script src="inventory/store.js"></script>
 
     <script src="./controls/updateSquare.js"></script>
     <script src="./controls/updateCursor.js"></script>
