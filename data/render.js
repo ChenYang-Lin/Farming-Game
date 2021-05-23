@@ -12,8 +12,11 @@ function renderUserInfo() {
 }
 
 function renderSeedDisplay() {
-  seedName = plantsName[selectedSeedID].name;
-  let element = InfoSeedInventory.find((s) => s.seedID === selectedSeedID);
+  plantIdOfSelectedIvenItem = InfoSeedInventory[selectedSeedID].seedID;
+
+  seedName = plantsName[plantIdOfSelectedIvenItem].name;
+  let element = InfoSeedInventory.find((s) => s.seedID === plantIdOfSelectedIvenItem);
+  // console.log(InfoSeedInventory);
   seedAmt = element.seedAmount;
   currSeedInfo.innerHTML = `${seedName} Seeds: ${seedAmt}`;
 }

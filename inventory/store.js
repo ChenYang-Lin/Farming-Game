@@ -41,10 +41,8 @@ function showMerchandise() {
       `;
 
     function choosePlant() {
-      //   console.log(plantName);
-      if (plantName == "Potato") return spriteImages[0][5];
-      if (plantName == "Carrot") return spriteImages[1][5];
-      if (plantName == "Grape") return spriteImages[2][5];
+      let e = storeData.find((e) => plantName === e.name);
+      return spriteImages[e.plantID][5];
     }
     merchandiseContainer.innerHTML += container;
   });

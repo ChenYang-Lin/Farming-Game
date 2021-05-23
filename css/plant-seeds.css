@@ -108,6 +108,7 @@
   align-items: center;
   /* background-color: blue; */
   z-index: 3;
+  overflow-y: scroll;
 }
 .seeds-container {
 }

@@ -11,7 +11,7 @@ function load() {
       currLevel: 1,
       currExp: 0,
       expNeededForNextLvl: 10,
-      gold: 100,
+      gold: 10000,
     };
     saveUserData();
     console.log(InfoSeedInventory);

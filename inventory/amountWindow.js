@@ -27,10 +27,14 @@ amtConfirmBtn.addEventListener("click", () => {
     }
 
     let element = InfoSeedInventory.find((e) => e.seedID === selectedPlantID);
-    console.log(totalPrice);
-    console.log(unitPrice);
+    // console.log(totalPrice);
+    // console.log(unitPrice);
     InfoUserData.gold -= totalPrice;
-    element.seedAmount += currAmount;
+    if (element === undefined) {
+      InfoSeedInventory.push({ seedID: selectedPlantID, seedAmount: currAmount });
+    } else {
+      element.seedAmount += currAmount;
+    }
   } else if (action === "sell") {
     //   sell
     // Check if enough inventory in bag

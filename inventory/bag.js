@@ -39,9 +39,8 @@ function showVege() {
     </div>
     `;
     function choosePlant() {
-      if (vegeName == "Potato") return spriteImages[0][5];
-      if (vegeName == "Carrot") return spriteImages[1][5];
-      if (vegeName == "Grape") return spriteImages[2][5];
+      let e = storeData.find((e) => vegeName === e.name);
+      return spriteImages[e.plantID][5];
     }
     vegeContainer.innerHTML += container;
   });
@@ -56,7 +55,9 @@ function selectNewVege(e) {
     e.target.parentNode.children[i].style.border = "2px solid black";
   }
   e.target.style.border = "5px solid red";
-  sellUnitPrice = storeData[indexBagSelected].sellPrice;
+
+  let indexOfplantID = InfoBag[indexBagSelected].vegeID;
+  sellUnitPrice = storeData[indexOfplantID].sellPrice;
 }
 
 function confirmVege() {
