@@ -69,3 +69,8 @@ let fps = 30;
 const interval = setInterval(() => {
   updateGame();
 }, 1000 / fps);
+
+// prevent scroll
+document.ontouchmove = function (event) {
+  event.preventDefault();
+};
