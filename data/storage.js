@@ -1,3 +1,8 @@
+document.querySelector(".clear").addEventListener("click", () => {
+  localStorage.clear();
+  location.reload();
+});
+
 function save() {
   localStorage.setItem(LOCAL_STORAGE_FARM_STAT, JSON.stringify(InfoFarmSquares));
 }
