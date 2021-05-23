@@ -21,7 +21,7 @@ function updateGame() {
     currPlantID = InfoFarmSquares[i].plantID;
 
     if (timePassed < needTime) {
-      needTimeQuarter = needTime / 4;
+      needTimeQuarter = needTime / 3;
 
       // Progress Bar
       const timeProgressBar = document.querySelector(".time-bot" + i);
@@ -30,16 +30,14 @@ function updateGame() {
       timeProgressBar.style.width = `${percent}px`;
 
       if (needTime - timePassed < needTimeQuarter) {
-        currentPlant.style.backgroundImage = getImage(currPlantID, 4);
-      } else if (needTime - timePassed < needTimeQuarter * 2) {
         currentPlant.style.backgroundImage = getImage(currPlantID, 3);
-      } else if (needTime - timePassed < needTimeQuarter * 3) {
+      } else if (needTime - timePassed < needTimeQuarter * 2) {
         currentPlant.style.backgroundImage = getImage(currPlantID, 2);
       } else {
         currentPlant.style.backgroundImage = getImage(currPlantID, 1);
       }
     } else {
-      currentPlant.style.backgroundImage = getImage(currPlantID, 5);
+      currentPlant.style.backgroundImage = getImage(currPlantID, 4);
       currentPlant.parentNode.childNodes[0].classList.remove("time-top");
       //   currentPlant.parentNode.childNodes[0].style.display = "none";
       currentPlant.parentNode.childNodes[1].classList.remove("time-bot");

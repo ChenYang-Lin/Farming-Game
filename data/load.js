@@ -20,6 +20,10 @@ function load() {
         },
         {
           seedID: 1,
+          seedAmount: 100,
+        },
+        {
+          seedID: 2,
           seedAmount: 50,
         },
       ];
@@ -66,7 +70,7 @@ function load() {
       case STAT.READY:
         // console.log(currPlant);
         // currPlant.style.backgroundImage = `url(${plantsURL.potatoURL})`;
-        currPlant.style.backgroundImage = getImage(currPlantID, 5);
+        currPlant.style.backgroundImage = getImage(currPlantID, 4);
         currPlant.parentNode.classList.add("plant-ready");
         break;
       case STAT.HARVESTED:

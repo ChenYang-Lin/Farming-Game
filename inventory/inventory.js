@@ -41,8 +41,9 @@ function showSeeds() {
         </div>
       `;
     function chooseSeeds() {
-      if (seedName == "Potato") return plantsURL.potatoURL;
-      if (seedName == "Carrot") return plantsURL.carrotURL;
+      if (seedName == "Potato") return spriteImages[0][5];
+      if (seedName == "Carrot") return spriteImages[1][5];
+      if (seedName == "Grape") return spriteImages[2][5];
     }
     seedsContainer.innerHTML += container;
   });

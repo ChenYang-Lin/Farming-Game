@@ -5,6 +5,9 @@ const plantsData = [
   {
     needTime: 15,
   },
+  {
+    needTime: 30,
+  },
 ];
 
 const plantsURL = {
@@ -30,6 +33,9 @@ const plantsName = [
   {
     name: "Carrot",
   },
+  {
+    name: "Grape",
+  },
 ];
 
 const spriteImages = [
@@ -50,6 +56,15 @@ const spriteImages = [
     ["./images/carrot/carrot3.png"],
     ["./images/carrot/carrot4.png"],
     ["./images/carrot/carrot.png"],
+  ],
+  [
+    // grape
+    ["./images/grape/grape0.png"],
+    ["./images/grape/grape1.png"],
+    ["./images/grape/grape2.png"],
+    ["./images/grape/grape3.png"],
+    ["./images/grape/grape4.png"],
+    ["./images/grape/grape.png"],
   ],
 ];
 
