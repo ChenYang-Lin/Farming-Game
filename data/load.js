@@ -10,9 +10,25 @@ function load() {
       gold: 100,
     };
     saveUserData();
+    console.log(InfoSeedInventory);
+
+    if (InfoSeedInventory.length === 0) {
+      InfoSeedInventory = [
+        {
+          seedID: 0,
+          seedAmount: 200,
+        },
+        {
+          seedID: 1,
+          seedAmount: 50,
+        },
+      ];
+    }
+    saveSeedInventory();
   }
   // update display
   renderUserInfo();
+  renderSeedDisplay();
 
   // init or load land squares
   for (let i = 0; i < numFarmSquare; i++) {
@@ -39,6 +55,8 @@ function load() {
 
     let currSquareStatus = InfoFarmSquares[i].status;
     let currPlant = farmContainer.childNodes[i].childNodes[2];
+    let currPlantID = InfoFarmSquares[i].plantID;
+
     switch (currSquareStatus) {
       case STAT.EMPTY:
         break;
@@ -47,11 +65,12 @@ function load() {
         break;
       case STAT.READY:
         // console.log(currPlant);
-        currPlant.style.backgroundImage = `url(${plantsURL.potatoURL})`;
+        // currPlant.style.backgroundImage = `url(${plantsURL.potatoURL})`;
+        currPlant.style.backgroundImage = getImage(currPlantID, 5);
         currPlant.parentNode.classList.add("plant-ready");
         break;
       case STAT.HARVESTED:
-        currPlant.style.backgroundImage = `url(${plantsURL.potato0URL})`;
+        currPlant.style.backgroundImage = getImage(currPlantID, 0);
         break;
       default:
         console.log("initData error");

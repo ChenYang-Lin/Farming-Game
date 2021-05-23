@@ -22,13 +22,14 @@ function collect(e) {
 
   // update info plant
   let currPlant = farmContainer.childNodes[indexOfCurrLand].childNodes[2];
-  currPlant.style.backgroundImage = `url(${plantsURL.potato0URL})`;
+  let currPlantID = InfoFarmSquares[indexOfCurrLand].plantID;
+  console.log(currPlantID);
+
+  currPlant.style.backgroundImage = getImage(currPlantID, 0);
+  // currPlant.style.backgroundImage = getImage(0, 0);
+  // currPlant.style.backgroundImage = `url(${plantsURL.potato0URL})`;
   currPlant.parentElement.classList.remove("plant-ready");
 
-  InfoFarmSquares[indexOfCurrLand] = {
-    status: STAT.HARVESTED,
-    plantTime: null,
-    plantID: null,
-  };
+  InfoFarmSquares[indexOfCurrLand].status = STAT.HARVESTED;
   save();
 }

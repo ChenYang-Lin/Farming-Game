@@ -34,9 +34,11 @@ messageBtn.addEventListener("click", (e) => {
 // LocalStorage keys and application data
 const LOCAL_STORAGE_FARM_STAT = "LOCAL_STORAGE_FARM_STAT";
 const LOCAL_STORAGE_FARM_USER_DATA = "LOCAL_STORAGE_FARM_USER_DATA";
+const LOCAL_STORAGE_FARM_SEED_INVENTORY = "LOCAL_STORAGE_FARM_SEED_INVENTORY";
 
 let InfoFarmSquares = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_STAT)) || [];
 let InfoUserData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_USER_DATA));
+let InfoSeedInventory = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_SEED_INVENTORY)) || [];
 
 // Image URLS and color
 // const potato1URL = "./images/potato/potato1.png";
@@ -61,9 +63,9 @@ function alertWindow(text) {
   messageBody.innerHTML = text;
 }
 
+load();
+
 let fps = 30;
 const interval = setInterval(() => {
   updateGame();
 }, 1000 / fps);
-
-load();

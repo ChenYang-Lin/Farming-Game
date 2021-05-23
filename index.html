@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farm Game</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/plant-seeds.css" />
   </head>
   <body>
     <div class="cover"></div>
@@ -14,6 +15,25 @@
         <div class="message-header">Alert</div>
         <div class="message-body">message body</div>
         <button class="message-btn">Ok</button>
+      </div>
+
+      <div class="plant-seeds-container">
+        <div class="seeds-header">Plant Seeds</div>
+        <div class="seeds-body">
+          <div class="seeds-container">
+            <!-- <div class="seed-element-container">
+              <div class="element-image"></div>
+              <div class="element-info">
+                <div class="element-name">potato seeds</div>
+                <div class="element-amount">X3</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="seeds-btns">
+          <button class="btn cancel-btn">Cancel</button>
+          <button class="btn select-btn">Select</button>
+        </div>
       </div>
 
       <div class="user-info-container">
@@ -44,11 +64,15 @@
       </div>
       <div class="farm-container"></div>
       <div class="ui-container">
-        <div class="ui-element seed"></div>
-        <div class="ui-element collect"></div>
+        <div class="ui-element cancel"></div>
         <div class="ui-element water"></div>
         <div class="ui-element spade"></div>
-        <div class="ui-element cancel"></div>
+        <div class="ui-element collect"></div>
+        <div class="ui-element seed"></div>
+        <div class="curr-seed-change">
+          <div class="curr-seed-amount">Potato Seeds: 5</div>
+          <button class="select-seeds">Change Seed</button>
+        </div>
       </div>
     </div>
     <script src="./data/storage.js"></script>
@@ -59,6 +83,8 @@
 
     <script src="./update/updateGrowingData.js"></script>
     <script src="./update/updateGame.js"></script>
+
+    <script src="inventory/inventory.js"></script>
 
     <script src="./controls/updateSquare.js"></script>
     <script src="./controls/updateCursor.js"></script>

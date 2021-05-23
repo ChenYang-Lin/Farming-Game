@@ -1,5 +1,13 @@
 function updateCursor(e) {
-  clearSelected(e);
+  if (e.target.parentNode.classList[0] !== "ui-container") {
+    if (e.target.classList[0] === "select-seeds") {
+      clearSelected(e.target.parentNode.parentNode);
+    }
+    return;
+  }
+
+  let uiContainer = e.target.parentNode;
+  clearSelected(uiContainer);
   //   console.log(e.target);
 
   if (e.target.classList[1] === "seed") {
@@ -37,9 +45,8 @@ function updateCursor(e) {
   }
 }
 
-function clearSelected(e) {
-  let uiContainer = e.target.parentNode;
-
+function clearSelected(uiContainer) {
+  document.body.style.cursor = `url(${""}), auto`;
   for (let i = 0; i < uiContainer.children.length; i++) {
     if (uiContainer.children[i].classList.contains("selected-item")) {
       uiContainer.children[i].classList.toggle("selected-item");

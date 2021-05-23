@@ -10,3 +10,10 @@ function renderUserInfo() {
   goldText.innerHTML = `${gold}`;
   expGreen.style.width = `${lvlPercent}px`;
 }
+
+function renderSeedDisplay() {
+  seedName = plantsName[selectedSeedID].name;
+  let element = InfoSeedInventory.find((s) => s.seedID === selectedSeedID);
+  seedAmt = element.seedAmount;
+  currSeedInfo.innerHTML = `${seedName} Seeds: ${seedAmt}`;
+}

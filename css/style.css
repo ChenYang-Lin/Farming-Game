@@ -49,23 +49,33 @@ body {
   border-color: red;
 }
 .water {
-  background-image: url("./images/ui/waterCursor.png");
+  background-image: url("../images/ui/waterCursor.png");
 }
 
 .seed {
-  background-image: url("./images/ui/potatoSeed.png");
+  background-image: url("../images/ui/potatoSeed.png");
 }
 
 .spade {
-  background-image: url("./images/ui/spade.png");
+  background-image: url("../images/ui/spade.png");
 }
 
 .collect {
-  background-image: url("./images/ui/collect.png");
+  background-image: url("../images/ui/collect.png");
 }
 
 .cancel {
-  background-image: url("./images/ui/clear.png");
+  background-image: url("../images/ui/clear.png");
+}
+
+.select-seeds {
+  height: 50px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 150%;
+  border: none;
+  box-shadow: 0px 0px 5px black;
 }
 
 /* user-info-container */
@@ -117,7 +127,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./images/ui/gold.png");
+  background-image: url("../images/ui/gold.png");
 }
 
 .gold-text {
@@ -210,11 +220,11 @@ body {
 }
 
 .inventory {
-  background-image: url("./images/ui/bag.png");
+  background-image: url("../images/ui/bag.png");
 }
 
 .shop {
-  background-image: url("./images/ui/shop.png");
+  background-image: url("../images/ui/shop.png");
 }
 
 /* farm container */

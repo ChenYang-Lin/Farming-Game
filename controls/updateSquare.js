@@ -4,7 +4,16 @@ function updateFarmSquare(e) {
   if (currInstruction === "") return;
 
   if (currInstruction === "seed") {
-    let plantID = 0;
+    let element = InfoSeedInventory.find((s) => s.seedID === selectedSeedID);
+    let index = element.seedID;
+    if (element.seedAmount <= 0) {
+      alertWindow("Not Enough seeds");
+      return;
+    }
+    let plantID = element.seedID;
+    InfoSeedInventory[index].seedAmount--;
+    saveSeedInventory();
+    renderSeedDisplay();
     plant(e, plantID);
   }
 

@@ -11,7 +11,7 @@ function plant(e, plantID) {
 
   // update user info
   let expReceieved = 2;
-  let goldChanged = -1;
+  let goldChanged = 0;
 
   rewardUser(expReceieved, goldChanged);
   renderUserInfo();
@@ -27,17 +27,8 @@ function plant(e, plantID) {
   save();
 
   // Show time bar
-  //   console.log(e.target);
   let currSquare = e.target;
   currSquare.childNodes[0].classList.add("time-top");
-  // currSquare.childNodes[0].style.display = "inline";
   currSquare.childNodes[1].classList.add("time-bot");
   currSquare.childNodes[1].classList.add("time-bot" + indexOfCurrLand);
-
-  //   plantsData[InfoFarmSquares[indexOfCurrLand].plantID] // current square's plantID
-  //   .needTime
-
-  // Update image
-  //   let currPlant = e.target.childNodes[0];
-  //   currPlant.style.backgroundImage = `url(${plantsURL.potato1URL})`;
 }
