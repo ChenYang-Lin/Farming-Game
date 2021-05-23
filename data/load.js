@@ -31,8 +31,17 @@ function load() {
         seedAmount: 50,
       },
     ];
-
     saveSeedInventory();
+
+    // Bag
+    InfoBag = [
+      {
+        vegeID: 0,
+        vegeAmount: 2,
+        name: "Potato",
+      },
+    ];
+    saveInfoBag();
   }
   // update display
   renderUserInfo();

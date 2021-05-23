@@ -38,11 +38,13 @@ const LOCAL_STORAGE_FARM_STAT = "LOCAL_STORAGE_FARM_STAT";
 const LOCAL_STORAGE_FARM_USER_DATA = "LOCAL_STORAGE_FARM_USER_DATA";
 const LOCAL_STORAGE_FARM_SEED_INVENTORY = "LOCAL_STORAGE_FARM_SEED_INVENTORY";
 const LOCAL_STORAGE_FARM_STORE = "LOCAL_STORAGE_FARM_STORE";
+const LOCAL_STORAGE_FARM_BAG = "LOCAL_STORAGE_FARM_BAG";
 
 let InfoFarmSquares = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_STAT)) || [];
 let InfoUserData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_USER_DATA));
 let InfoSeedInventory = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_SEED_INVENTORY)) || [];
 let InfoStore = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_STORE)) || [];
+let InfoBag = JSON.parse(localStorage.getItem(LOCAL_STORAGE_FARM_BAG)) || [];
 
 // Image URLS and color
 // const potato1URL = "./images/potato/potato1.png";

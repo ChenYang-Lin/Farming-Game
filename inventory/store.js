@@ -21,7 +21,7 @@ openStoreBtn.addEventListener("click", () => {
 
 merchandiseContainer.addEventListener("click", (e) => selectNewPlant(e));
 
-storeSelectBtn.addEventListener("click", () => changePlant());
+storeSelectBtn.addEventListener("click", () => confirmPlant());
 
 // Functioins
 function showMerchandise() {
@@ -39,6 +39,7 @@ function showMerchandise() {
             </div>
         </div>
       `;
+
     function choosePlant() {
       //   console.log(plantName);
       if (plantName == "Potato") return spriteImages[0][5];
@@ -50,6 +51,7 @@ function showMerchandise() {
 }
 
 function selectNewPlant(e) {
+  //   console.log(e.target);
   indexSelected = Array.prototype.indexOf.call(e.target.parentNode.children, e.target);
   //   console.log(indexSelected);
 
@@ -61,22 +63,26 @@ function selectNewPlant(e) {
     e.target.parentNode.children[i].style.border = "2px solid black";
   }
 
+  //   console.log(e.target);
   e.target.style.border = "5px solid red";
 
   // fine the unit price of current plant
   unitPrice = storeData[indexSelected].price;
 }
 
-function changePlant() {
+function confirmPlant() {
   if (indexSelected === null || indexSelected === "") {
     alertWindow("Please select a plant!");
     return;
   }
+  //   console.log(merchandiseContainer.parentNode.children[indexSelected]);
+  merchandiseContainer.parentNode.children[0].children[indexSelected].style.border =
+    "2px solid black";
 
   selectedPlantID = indexSelected;
-  indexSelected = null;
 
-  openChooseAmountWindow();
+  openChooseAmountWindow("buy");
+  indexSelected = null;
 }
 
 function closeStore() {
@@ -84,95 +90,4 @@ function closeStore() {
   storeBox.style.display = "none";
   cover.style.display = "none";
   indexSelected = null;
-}
-
-// Selectors
-const amtSubtract = document.querySelector(".subtract");
-const amtAdd = document.querySelector(".add");
-const currAmt = document.querySelector(".curr-amount");
-const amtCancelBtn = document.querySelector(".amount-cancel-btn");
-const amtConfirmBtn = document.querySelector(".amount-select-btn");
-
-const amtMoney = document.querySelector(".money");
-const amtPrice = document.querySelector(".total-price");
-
-const chooseAmtContainer = document.querySelector(".choose-amount-container");
-
-let currAmount = parseInt(currAmt.innerHTML);
-let totalPrice = 0;
-
-// Listeners
-amtConfirmBtn.addEventListener("click", () => {
-  // Check if enough money
-  if (InfoUserData.gold < totalPrice) {
-    alertWindow("not enough money");
-    return;
-  }
-
-  let element = InfoSeedInventory.find((e) => e.seedID === selectedPlantID);
-  console.log(totalPrice);
-  console.log(unitPrice);
-  InfoUserData.gold -= totalPrice;
-  element.seedAmount += currAmount;
-
-  // update local stroage
-  saveUserData();
-  saveSeedInventory();
-
-  // rerender
-  renderUserInfo();
-  renderSeedDisplay();
-
-  closeChooseAmtContainer();
-});
-
-amtCancelBtn.addEventListener("click", () => {
-  closeChooseAmtContainer();
-});
-
-// ADD and SUBTRACT event listeners
-amtSubtract.addEventListener("click", () => {
-  if (currAmount <= 1) {
-    alertWindow("Already at the lowest quantity");
-    return;
-  }
-  currAmount--;
-  currAmt.innerHTML = currAmount;
-  updateAndRenderTotalPrice();
-});
-
-amtAdd.addEventListener("click", () => {
-  if (currAmount >= 100) {
-    alertWindow("Buy more next time");
-    return;
-  }
-  currAmount++;
-  currAmt.innerHTML = currAmount;
-  updateAndRenderTotalPrice();
-});
-
-// Function
-function openChooseAmountWindow() {
-  chooseAmtContainer.style.display = "block";
-  cover2.style.display = "block";
-
-  updateAndRenderTotalPrice();
-
-  // set amount for choose amount container
-  amtMoney.innerHTML = `Your Money: $${InfoUserData.gold}`;
-  amtPrice.innerHTML = `Total: $${unitPrice}`;
-}
-
-function updateAndRenderTotalPrice() {
-  totalPrice = currAmount * unitPrice;
-  amtPrice.innerHTML = `Total: $${totalPrice}`;
-}
-
-function closeChooseAmtContainer() {
-  chooseAmtContainer.style.display = "none";
-  cover2.style.display = "none";
-  currAmount = 1;
-  currAmt.innerHTML = currAmount;
-  indexSelected = null;
-  showMerchandise();
 }

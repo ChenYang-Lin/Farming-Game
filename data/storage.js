@@ -18,3 +18,7 @@ function saveSeedInventory() {
 function saveInfoStore() {
   localStorage.setItem(LOCAL_STORAGE_FARM_STORE, JSON.stringify(InfoStore));
 }
+
+function saveInfoBag() {
+  localStorage.setItem(LOCAL_STORAGE_FARM_BAG, JSON.stringify(InfoBag));
+}

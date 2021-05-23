@@ -46,6 +46,10 @@
   display: none;
 }
 
+.bag-container {
+  display: none;
+}
+
 .seeds-header {
   /*  */
 }

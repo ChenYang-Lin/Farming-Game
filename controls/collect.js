@@ -14,8 +14,9 @@ function collect(e) {
 
   // update user info
   let expReceieved = 2;
-  let goldChanged = 2;
+  let goldChanged = 0;
 
+  collectPlant(InfoFarmSquares[indexOfCurrLand].plantID);
   rewardUser(expReceieved, goldChanged);
   renderUserInfo();
   saveUserData();
@@ -36,4 +37,19 @@ function collect(e) {
 
   InfoFarmSquares[indexOfCurrLand].status = STAT.HARVESTED;
   save();
+}
+
+function collectPlant(id) {
+  let ID = id;
+
+  let e = InfoBag.find((e) => e.vegeID === ID);
+  let index = InfoBag.indexOf(e);
+  if (e === undefined) {
+    InfoBag.push({ vegeID: ID, vegeAmount: 1, name: plantsName[ID].name });
+  } else {
+    InfoBag[index].vegeAmount++;
+  }
+  // console.log(index);
+
+  saveInfoBag();
 }

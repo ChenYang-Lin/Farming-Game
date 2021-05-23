@@ -3,10 +3,43 @@ const plantsData = [
     needTime: 5,
   },
   {
-    needTime: 15,
+    needTime: 20,
   },
   {
-    needTime: 30,
+    // 1 min
+    needTime: 60,
+  },
+  {
+    // 3 min
+    needTime: 180,
+  },
+  {
+    // 10 min
+    needTime: 600,
+  },
+  {
+    // 30 min
+    needTime: 1800,
+  },
+  {
+    // 1 hour
+    needTime: 3600,
+  },
+  {
+    // 3 hour
+    needTime: 10800,
+  },
+  {
+    // 10 hour
+    needTime: 36000,
+  },
+  {
+    // 1 day
+    needTime: 86400,
+  },
+  {
+    // 2 day
+    needTime: 172800,
   },
 ];
 
@@ -36,36 +69,30 @@ const plantsName = [
   {
     name: "Grape",
   },
-];
-
-const spriteImages = [
-  [
-    // potato
-    ["./images/potato/potato0.png"],
-    ["./images/potato/potato1.png"],
-    ["./images/potato/potato2.png"],
-    ["./images/potato/potato3.png"],
-    ["./images/potato/potato4.png"],
-    ["./images/potato/potato.png"],
-  ],
-  [
-    // carrots
-    ["./images/carrot/carrot0.png"],
-    ["./images/carrot/carrot1.png"],
-    ["./images/carrot/carrot2.png"],
-    ["./images/carrot/carrot3.png"],
-    ["./images/carrot/carrot4.png"],
-    ["./images/carrot/carrot.png"],
-  ],
-  [
-    // grape
-    ["./images/grape/grape0.png"],
-    ["./images/grape/grape1.png"],
-    ["./images/grape/grape2.png"],
-    ["./images/grape/grape3.png"],
-    ["./images/grape/grape4.png"],
-    ["./images/grape/grape.png"],
-  ],
+  {
+    name: "Broccoli",
+  },
+  {
+    name: "Cauliflower",
+  },
+  {
+    name: "Eggplant",
+  },
+  {
+    name: "Greenpepper",
+  },
+  {
+    name: "Pumpkin",
+  },
+  {
+    name: "Scallion",
+  },
+  {
+    name: "Stringbean",
+  },
+  {
+    name: "Watermelon",
+  },
 ];
 
 function getImage(currPlantID, index) {
@@ -78,15 +105,66 @@ const storeData = [
     plantID: 0,
     price: 2,
     name: "Potato",
+    sellPrice: 4,
   },
   {
     plantID: 1,
     price: 10,
     name: "Carrot",
+    sellPrice: 16,
   },
   {
     plantID: 2,
     price: 30,
     name: "Grape",
+    sellPrice: 40,
+  },
+  {
+    plantID: 3,
+    price: 30,
+    name: "Broccoli",
+    sellPrice: 40,
+  },
+  {
+    plantID: 4,
+    price: 30,
+    name: "Cauliflower",
+    sellPrice: 40,
+  },
+  {
+    plantID: 5,
+    price: 30,
+    name: "Eggplant",
+    sellPrice: 40,
+  },
+  {
+    plantID: 6,
+    price: 30,
+    name: "Greenpepper",
+    sellPrice: 40,
+  },
+  {
+    plantID: 7,
+    price: 30,
+    name: "Pumpkin",
+    sellPrice: 40,
+  },
+  {
+    plantID: 8,
+    price: 30,
+    name: "Scallion",
+    sellPrice: 40,
+  },
+  {
+    plantID: 9,
+    price: 30,
+    name: "Stringbean",
+    sellPrice: 40,
+  },
+  {
+    plantID: 10,
+    price: 30,
+    name: "Watermelon",
+    sellPrice: 40,
   },
 ];
