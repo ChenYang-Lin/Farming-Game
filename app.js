@@ -73,7 +73,7 @@ function alertWindow(text) {
 
 load();
 
-let fps = 30;
+let fps = 5;
 const interval = setInterval(() => {
   updateGame();
 }, 1000 / fps);

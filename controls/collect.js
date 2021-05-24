@@ -16,6 +16,9 @@ function collect(e) {
   let expReceieved = 2;
   let goldChanged = 0;
 
+  idOfPlant = InfoFarmSquares[indexOfCurrLand].plantID;
+  expReceieved = storeData[idOfPlant].exp;
+
   collectPlant(InfoFarmSquares[indexOfCurrLand].plantID);
   rewardUser(expReceieved, goldChanged);
   renderUserInfo();

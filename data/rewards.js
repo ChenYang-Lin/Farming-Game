@@ -4,7 +4,7 @@ function rewardUser(expReceieved, goldChanged) {
 
   if (InfoUserData.currExp >= InfoUserData.expNeededForNextLvl) {
     InfoUserData.currExp %= InfoUserData.expNeededForNextLvl;
-    InfoUserData.expNeededForNextLvl = Math.floor((InfoUserData.expNeededForNextLvl *= 1.3));
+    InfoUserData.expNeededForNextLvl = Math.floor((InfoUserData.expNeededForNextLvl *= 1.8));
     InfoUserData.currLevel++;
   }
 }

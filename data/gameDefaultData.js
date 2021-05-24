@@ -144,6 +144,7 @@ const storeData = [
     name: "Potato",
     sellPrice: 3,
     unlock: 1,
+    exp: 1,
   },
   {
     plantID: 1,
@@ -151,12 +152,15 @@ const storeData = [
     name: "Carrot",
     sellPrice: 12,
     unlock: 2,
+    exp: 2,
   },
   {
     plantID: 2,
     price: 30,
     name: "Grape",
     unlock: 3,
+    sellPrice: 35,
+    exp: 3,
   },
   {
     plantID: 3,
@@ -164,6 +168,7 @@ const storeData = [
     name: "Broccoli",
     sellPrice: 90,
     unlock: 4,
+    exp: 5,
   },
   {
     plantID: 4,
@@ -171,6 +176,7 @@ const storeData = [
     name: "Cauliflower",
     sellPrice: 180,
     unlock: 5,
+    exp: 8,
   },
   {
     plantID: 5,
@@ -178,6 +184,7 @@ const storeData = [
     name: "Eggplant",
     sellPrice: 250,
     unlock: 6,
+    exp: 12,
   },
   {
     plantID: 6,
@@ -185,6 +192,7 @@ const storeData = [
     name: "Greenpepper",
     sellPrice: 340,
     unlock: 7,
+    exp: 19,
   },
   {
     plantID: 7,
@@ -192,6 +200,7 @@ const storeData = [
     name: "Pumpkin",
     sellPrice: 450,
     unlock: 8,
+    exp: 28,
   },
   {
     plantID: 8,
@@ -199,6 +208,7 @@ const storeData = [
     name: "Scallion",
     sellPrice: 520,
     unlock: 9,
+    exp: 41,
   },
   {
     plantID: 9,
@@ -206,6 +216,7 @@ const storeData = [
     name: "Stringbean",
     sellPrice: 570,
     unlock: 10,
+    exp: 54,
   },
   {
     plantID: 10,
@@ -213,5 +224,6 @@ const storeData = [
     name: "Watermelon",
     sellPrice: 690,
     unlock: 11,
+    exp: 60,
   },
 ];

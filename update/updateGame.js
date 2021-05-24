@@ -24,6 +24,7 @@ function updateGame() {
     let minute = Math.floor((timeRemaining % 3600) / 60);
     let second = Math.floor((timeRemaining % 60) / 1);
     currentPlant.parentNode.childNodes[3].innerHTML = `${day}d ${hour}h ${minute}m ${second}s`;
+    currentPlant.parentNode.childNodes[3].classList.add("time-display");
 
     // find out what is current seed in the soil
     currPlantID = InfoFarmSquares[i].plantID;
