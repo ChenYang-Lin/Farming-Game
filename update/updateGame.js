@@ -17,6 +17,14 @@ function updateGame() {
     let needTime = plantsData[InfoFarmSquares[i].plantID].needTime;
     let timePassed = currtTimeInSec - InfoFarmSquares[i].plantTime;
 
+    // update time display
+    let timeRemaining = needTime - timePassed + 1;
+    let day = Math.floor(timeRemaining / 86400);
+    let hour = Math.floor((timeRemaining % 86400) / 3600);
+    let minute = Math.floor((timeRemaining % 3600) / 60);
+    let second = Math.floor((timeRemaining % 60) / 1);
+    currentPlant.parentNode.childNodes[3].innerHTML = `${day}d ${hour}h ${minute}m ${second}s`;
+
     // find out what is current seed in the soil
     currPlantID = InfoFarmSquares[i].plantID;
 
@@ -38,10 +46,13 @@ function updateGame() {
       }
     } else {
       currentPlant.style.backgroundImage = getImage(currPlantID, 4);
+      // remove time bar and text
       currentPlant.parentNode.childNodes[0].classList.remove("time-top");
       //   currentPlant.parentNode.childNodes[0].style.display = "none";
       currentPlant.parentNode.childNodes[1].classList.remove("time-bot");
       currentPlant.parentNode.childNodes[1].classList.remove("time-bot" + i);
+      currentPlant.parentNode.childNodes[3].classList.remove("time-display");
+      currentPlant.parentNode.childNodes[3].innerHTML = "";
 
       currentPlant.parentNode.classList.add("plant-ready");
 

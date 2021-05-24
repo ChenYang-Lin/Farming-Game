@@ -263,6 +263,7 @@ body {
   background-size: 100px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .plant {
@@ -277,6 +278,7 @@ body {
 }
 
 .time-top {
+  top: 15%;
   width: 80px;
   height: 10px;
   position: absolute;
@@ -286,6 +288,7 @@ body {
 }
 
 .time-bot {
+  top: 15%;
   margin: 2px;
   width: 0px;
   height: 6px;
@@ -344,4 +347,16 @@ body {
   width: 20%;
   height: 10%;
   border-radius: 20px;
+}
+
+.time-display {
+  position: absolute;
+  top: 1%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: white;
+  font-size: 70%;
+  display: block;
 }

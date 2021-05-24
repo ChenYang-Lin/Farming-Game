@@ -31,4 +31,6 @@ function plant(e, plantID) {
   currSquare.childNodes[0].classList.add("time-top");
   currSquare.childNodes[1].classList.add("time-bot");
   currSquare.childNodes[1].classList.add("time-bot" + indexOfCurrLand);
+  // currSquare.childNodes[3].innerHTML = "sldfjsldjk";
+  currSquare.childNodes[3].classList.add("time-display");
 }

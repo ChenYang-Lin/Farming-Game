@@ -60,9 +60,12 @@ function load() {
     const timeBotDiv = document.createElement("div");
     // timeBotDiv.classList.add("time-bot");
 
+    const timeDiv = document.createElement("div");
+
     farmSquare.appendChild(timeTopDiv);
     farmSquare.appendChild(timeBotDiv);
     farmSquare.appendChild(plantDiv);
+    farmSquare.appendChild(timeDiv);
 
     // farmSquare.childNodes[0].classList.remove('time-top')
     farmContainer.appendChild(farmSquare);

@@ -1,56 +1,3 @@
-const plantsData = [
-  {
-    needTime: 5,
-  },
-  {
-    needTime: 20,
-  },
-  {
-    // 1 min
-    needTime: 60,
-  },
-  {
-    // 3 min
-    // needTime: 180,
-    needTime: 5,
-  },
-  {
-    // 10 min
-    // needTime: 600,
-    needTime: 5,
-  },
-  {
-    // 30 min
-    // needTime: 1800,
-    needTime: 5,
-  },
-  {
-    // 1 hour
-    // needTime: 3600,
-    needTime: 5,
-  },
-  {
-    // 3 hour
-    // needTime: 10800,
-    needTime: 5,
-  },
-  {
-    // 10 hour
-    // needTime: 36000,
-    needTime: 5,
-  },
-  {
-    // 1 day
-    // needTime: 86400,
-    needTime: 5,
-  },
-  {
-    // 2 day
-    // needTime: 172800,
-    needTime: 5,
-  },
-];
-
 // const plantsData = [
 //   {
 //     needTime: 5,
@@ -64,37 +11,90 @@ const plantsData = [
 //   },
 //   {
 //     // 3 min
-//     needTime: 180,
+//     // needTime: 180,
+//     needTime: 5,
 //   },
 //   {
 //     // 10 min
-//     needTime: 600,
+//     // needTime: 600,
+//     needTime: 5,
 //   },
 //   {
 //     // 30 min
-//     needTime: 1800,
+//     // needTime: 1800,
+//     needTime: 5,
 //   },
 //   {
 //     // 1 hour
-//     needTime: 3600,
+//     // needTime: 3600,
+//     needTime: 5,
 //   },
 //   {
 //     // 3 hour
-//     needTime: 10800,
+//     // needTime: 10800,
+//     needTime: 5,
 //   },
 //   {
 //     // 10 hour
-//     needTime: 36000,
+//     // needTime: 36000,
+//     needTime: 5,
 //   },
 //   {
 //     // 1 day
-//     needTime: 86400,
+//     // needTime: 86400,
+//     needTime: 5,
 //   },
 //   {
 //     // 2 day
-//     needTime: 172800,
+//     // needTime: 172800,
+//     needTime: 5,
 //   },
 // ];
+
+const plantsData = [
+  {
+    needTime: 5,
+  },
+  {
+    needTime: 20,
+  },
+  {
+    // 1 min
+    needTime: 60,
+  },
+  {
+    // 3 min
+    needTime: 180,
+  },
+  {
+    // 10 min
+    needTime: 600,
+  },
+  {
+    // 30 min
+    needTime: 1800,
+  },
+  {
+    // 1 hour
+    needTime: 3600,
+  },
+  {
+    // 3 hour
+    needTime: 10800,
+  },
+  {
+    // 10 hour
+    needTime: 36000,
+  },
+  {
+    // 1 day
+    needTime: 86400,
+  },
+  {
+    // 2 day
+    needTime: 172800,
+  },
+];
 
 const plantsName = [
   {
